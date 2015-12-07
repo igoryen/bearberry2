@@ -11,7 +11,7 @@ define("GRAY",  'style="background-color:lightgray;"');
 $week = 1548;
 $weeknext = $week+1;
 
-$did = 2; # did = Day ID, the part of the Week List which is for one day
+$did = 1; # did = Day ID, the part of the Week List which is for one day
 
 $uid1 = 1; # uid = User ID: 1 (Igor)
 $uid2 = 2; # uid = User ID: 2 (Jenica)
@@ -37,7 +37,7 @@ for($i = 0; $i < 10; $i++) {
   $i++;
 }
 $card_note_above = "Remember to do a good warm-up before the workout.";
-$card_note_below = "To make a comment put a number in 'C' column and write your column overleaf.";
+$card_note_below = "To make a comment put a number in 'C' column and write your comment overleaf.";
 
 # ================================
 // Create connection
