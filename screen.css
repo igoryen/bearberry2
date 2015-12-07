@@ -1,0 +1,171 @@
+@media print {
+    .cards_horizontal {
+          display: block;
+        }
+
+        table {
+          border-collapse: collapse;
+        }
+        table td {
+          border: solid 1pt gray;
+
+        }
+        .card {
+          /*background-color: lightblue;*/
+          /*border: solid 1px black;*/
+          display: inline-block;
+          font-size: 10pt;
+          /*display: table;*/
+          margin: 3pt;
+          margin-bottom: 15pt;
+          padding: 1pt;
+          width: 45%;
+        }
+        .card_note {
+          /*background-color: gray;*/
+          font-family: "Arial Narrow", sans-serif;
+          font-size: 8pt;
+          margin:0px;
+        }
+        .card .right {
+          float: right;
+        }
+
+        .header {
+          /*background-color: wheat;*/
+          font-family: Arial Black, sans-serif;
+          font-size: 8pt;
+          
+          /*display: block;        */
+        }
+        .card .header *{
+          display: inline;
+
+        }
+       
+        .table {
+          /*background-color: #ddd;*/
+          border: solid 1pt gray;
+          /*border-collapse: collapse;*/
+          font-family: "Arial Narrow", sans-serif;
+          font-size: 10pt;
+        }
+        .table .heading {
+          /*background-color: #eee;*/
+          /*color: green;*/
+          border: solid 1pt gray;
+          font-size: 8pt;
+        }
+        .table .heading .weight {
+          /*background-color: #eee;*/
+          /*font-size: 8pt;*/
+        }
+
+        .table .heading * {
+          background-color: lightgray;
+          color: black;
+          border: solid 1px gray;
+        }
+        .table .row {
+          /*background-color: wheat;*/
+          /*background-color: #ccc;*/
+          /*border: solid 1pt gray;*/
+          border-collapse: collapse;
+        }
+        .table .row .aligned {
+          text-align: center;
+        }
+        /*.table .row .small {
+          font-size: 7pt;
+        }*/
+        .table .row .muscle {
+          /*width: 20%;*/
+          font-size: 8pt;
+        }
+        .table .row .exe_name {
+          font-size: 9pt;
+        }
+        .table .row .weight {
+          font-weight: bold;
+          font-family: "Consolas";
+        }
+
+}
+      
+      /* end of media 'print'*/
+
+@media screen {
+.cards_horizontal {
+        display: block;
+}
+.card {
+  /*background-color: lightblue;*/
+  /*border: solid 1px black;*/
+  display: inline-block;
+  /*display: table;*/
+  margin: 2%;
+  padding: 1%;
+  width: 43%;
+}
+.card_note {
+  margin:0px;
+  background-color: gray;
+  font-family: "Arial Narrow", sans-serif;
+}
+.card .right {
+  float: right;
+}
+
+.header {
+  /*background-color: wheat;*/
+  font-family: Arial Black, sans-serif;
+  font-size: 8px;
+  /*display: block;        */
+}
+.card .header *{
+  display: inline;
+}
+
+.table {
+  /*background-color: #ddd;*/
+  border: solid 1px black;
+  /*border-collapse: collapse;*/
+  font-family: "Arial Narrow", sans-serif;
+}
+.table .heading {
+  background-color: #eee;
+
+
+}
+
+.table .heading * {
+  border: solid 1px black;
+  color: red;
+}
+.table .row {
+  /*background-color: wheat;*/
+  /*background-color: #ccc;*/
+  border: solid 1px black;
+  border-collapse: collapse;
+}
+.table .row .aligned {
+  text-align: center;
+}
+.table .row .small {
+  font-size: 80%;
+}
+.table .row .muscle {
+  width: 10%;
+}
+.table .row .exe_name {
+  width: 10%;
+}
+table {
+  border-collapse: collapse;
+}
+table td {
+  border: solid 1px black;
+
+}
+      
+}
