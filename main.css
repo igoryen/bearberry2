@@ -101,7 +101,7 @@
 .card {
   /*background-color: lightblue;*/
   /*border: solid 1px black;*/
-  display: inline-block;
+  display: inline;
   /*display: table;*/
   margin: 2%;
   padding: 1%;
@@ -129,7 +129,7 @@
 .table {
   /*background-color: #ddd;*/
   border: solid 1px black;
-  /*border-collapse: collapse;*/
+  border-collapse: collapse;
   font-family: "Arial Narrow", sans-serif;
 }
 .table .heading {
@@ -146,7 +146,7 @@
   /*background-color: wheat;*/
   /*background-color: #ccc;*/
   border: solid 1px black;
-  border-collapse: collapse;
+  /*border-collapse: collapse;*/
 }
 .table .row .aligned {
   text-align: center;
@@ -155,17 +155,19 @@
   font-size: 80%;
 }
 .table .row .muscle {
-  width: 10%;
+  width: auto;
 }
 .table .row .exe_name {
-  width: 10%;
+  width: auto;
 }
 table {
-  border-collapse: collapse;
+  /*border-collapse: collapse;*/
 }
 table td {
   border: solid 1px black;
 
 }
-      
+.comment {
+  background-color: #e5e8e8;
+}
 }

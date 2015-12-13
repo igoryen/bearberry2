@@ -357,7 +357,7 @@ $conn->close();
     <title>Bearberry</title>
 
     <!-- <link rel="stylesheet" media="print" href="print.css"> -->
-        <link rel="stylesheet" href="screen.css">
+        <link rel="stylesheet" href="main.css">
 
 
   </head>
