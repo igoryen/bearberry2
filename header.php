@@ -18,13 +18,6 @@ $uid2 = 2; # uid = User ID: 2 (Jenica)
 $uid3 = 3; # uid = User ID: 3 (Daniel)
 $uid4 = 4; # uid = User ID: 4(Joy)
 
-/*--------------------------------------
-/ Outdated 
-$lid1 = 5; # lid = Week List ID 
-$lid2 = 7; # lid = Week List ID 
-$lid3 = 6; # lid = Week List ID 
-$lid4 = 4; # lid = Week List ID 
-*/
 
 $longspace = "";
 for($i = 0; $i < 15; $i++) {
@@ -62,16 +55,6 @@ $users = [
 ];
 
 #====================================================================
-# IGOR
-
-/*------------------------------------
-| Display user names and user numbers
-*/
-// foreach($users as $key=>$val){
-//   echo $key . " - " . $val . '<br>';
-// }
-
-// array_push($bag, '<div class="cards_horizontal">');
 
 foreach($users as $uid=>$lid){
 
@@ -126,14 +109,7 @@ foreach($users as $uid=>$lid){
           // output data of each row
           while ($row = $result->fetch_assoc()) {
             array_push($bag, '<tr class="row">');
-            //array_push($bag, "<td>");
-            //array_push($bag, $row["day"]);
-            //array_push($bag, "<td ".SMALL.">");
-        //    array_push($bag, $row["first_name"]);
-        //    array_push($bag, "</td><td>");
             array_push($bag, '<td class="muscle">'.$row["main"].'</td>');
-
-
             array_push($bag, '<td class="exe_id aligned">'.$row["eid"].'</td>');
             array_push($bag, '<td class="exe_name">'.$row["name"].'</td>');
             array_push($bag, '<td class="week_num aligned">'.$row["week"].'</td>');
@@ -142,17 +118,6 @@ foreach($users as $uid=>$lid){
             array_push($bag, '<td class="comment">'.$shortspace.'</td>');
             array_push($bag, '<td class="current_week aligned">'.$longspace.'</td>');
             array_push($bag, '<td class="comment">'.$shortspace.'</td>');
-
-            // array_push($bag, $row["main_others"]);
-            // array_push($bag, "</td><td>");
-            // array_push($bag, $row["eid"]);
-            // array_push($bag, "</td><td>");
-            // array_push($bag, $row["name"]);
-            // array_push($bag, "</td><td>");
-            // array_push($bag, $row["week"]);
-            // array_push($bag, "</td><td>");
-            // array_push($bag, $row["weight"]);
-            // array_push($bag, "</td><td>".$space."</td><td>".$space."</td>");
             array_push($bag, "</tr>");
 
           }
@@ -162,209 +127,19 @@ foreach($users as $uid=>$lid){
         }
 
         array_push($bag, "</table>");
-        //array_push($bag, 'Comments? Put a reference number in column C and write on the flip side');
         array_push($bag, '<div class="note">'. $card_note_below.'</div>');
         array_push($bag, '</div>'); // close a card
-
-}
-/*
-
-#====================================================
-# JENICA
-#====================================================================
-$query = "SELECT first_name FROM bearberry.user WHERE id = %s";
-$sql = sprintf($query, mysql_real_escape_string($uid2));
-# echo $sql;
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-  while($row = $result->fetch_assoc()){
-    array_push($bag, "<b>" . $row["first_name"] ." - ". "List " . $lid2 . " - " . $week . "</b>");
-  }
 }
 
-
-#--------------------------------------------------------------------
-
-
-$query    = file_get_contents("..\bearberry\sql_scripts\select\multi_tables\b.sql");
-$sql = sprintf($query, 
-  mysql_real_escape_string($uid2), 
-  mysql_real_escape_string($lid2), 
-  mysql_real_escape_string($did)
-  );
-# echo $sql;
-$result = $conn->query($sql);
-//var_dump($result);
-
-
-
-array_push($bag, "<table>");
-
-if ($result->num_rows > 0) {
-
-  // output data of each row
-  while ($row = $result->fetch_assoc()) {
-    array_push($bag, "<tr>");
-    array_push($bag, "<td>");
-    array_push($bag, $row["day"]);
-    array_push($bag, "</td><td>");
-//    array_push($bag, $row["first_name"]);
-//    array_push($bag, "</td><td>");
-    array_push($bag, $row["main_others"]);
-    array_push($bag, "</td><td>");
-    array_push($bag, $row["eid"]);
-    array_push($bag, "</td><td>");
-    array_push($bag, $row["name"]);
-    array_push($bag, "</td><td>");
-    array_push($bag, $row["week"]);
-    array_push($bag, "</td><td>");
-    array_push($bag, $row["weight"]);
-    array_push($bag, "</td>");
-    array_push($bag, "</tr>");
-  }
-}
-else {
-  echo "0 results";
-}
-
-array_push($bag, "</table>");
-#====================================================
-# DANIEL
-#====================================================================
-$query = "SELECT first_name FROM bearberry.user WHERE id = %s";
-$sql = sprintf($query, mysql_real_escape_string($uid3));
-# echo $sql;
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-  while($row = $result->fetch_assoc()){
-    array_push($bag, "<b>" . $row["first_name"] ." - ". "List " . $lid3 . " - " . $week . "</b>");
-  }
-}
-
-
-#--------------------------------------------------------------------
-
-
-$query    = file_get_contents("..\bearberry\sql_scripts\select\multi_tables\b.sql");
-$sql = sprintf($query, 
-  mysql_real_escape_string($uid3), 
-  mysql_real_escape_string($lid3), 
-  mysql_real_escape_string($did)
-  );
-# echo $sql;
-$result = $conn->query($sql);
-//var_dump($result);
-
-
-
-array_push($bag, "<table>");
-
-if ($result->num_rows > 0) {
-
-  // output data of each row
-  while ($row = $result->fetch_assoc()) {
-    array_push($bag, "<tr>");
-    array_push($bag, "<td>");
-    array_push($bag, $row["day"]);
-    array_push($bag, "</td><td>");
-//    array_push($bag, $row["first_name"]);
-//    array_push($bag, "</td><td>");
-    array_push($bag, $row["main_others"]);
-    array_push($bag, "</td><td>");
-    array_push($bag, $row["eid"]);
-    array_push($bag, "</td><td>");
-    array_push($bag, $row["name"]);
-    array_push($bag, "</td><td>");
-    array_push($bag, $row["week"]);
-    array_push($bag, "</td><td>");
-    array_push($bag, $row["weight"]);
-    array_push($bag, "</td>");
-    array_push($bag, "</tr>");
-  }
-}
-else {
-  echo "0 results";
-}
-
-array_push($bag, "</table>");
-#====================================================
-# JOY
-#====================================================================
-$query = "SELECT first_name FROM bearberry.user WHERE id = %s";
-$sql = sprintf($query, mysql_real_escape_string($uid4));
-# echo $sql;
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-  while($row = $result->fetch_assoc()){
-    array_push($bag, "<b>" . $row["first_name"] ." - ". "List " . $lid4 . " - " . $week . "</b>");
-  }
-}
-
-
-#--------------------------------------------------------------------
-
-
-$query    = file_get_contents("..\bearberry\sql_scripts\select\multi_tables\b.sql");
-$sql = sprintf($query, 
-  mysql_real_escape_string($uid4), 
-  mysql_real_escape_string($lid4), 
-  mysql_real_escape_string($did)
-  );
-# echo $sql;
-$result = $conn->query($sql);
-//var_dump($result);
-
-
-
-array_push($bag, "<table>");
-
-if ($result->num_rows > 0) {
-
-  // output data of each row
-  while ($row = $result->fetch_assoc()) {
-    array_push($bag, "<tr>");
-    array_push($bag, "<td>");
-    array_push($bag, $row["day"]);
-    array_push($bag, "</td><td>");
-//    array_push($bag, $row["first_name"]);
-//    array_push($bag, "</td><td>");
-    array_push($bag, $row["main_others"]);
-    array_push($bag, "</td><td>");
-    array_push($bag, $row["eid"]);
-    array_push($bag, "</td><td>");
-    array_push($bag, $row["name"]);
-    array_push($bag, "</td><td>");
-    array_push($bag, $row["week"]);
-    array_push($bag, "</td><td>");
-    array_push($bag, $row["weight"]);
-    array_push($bag, "</td>");
-    array_push($bag, "</tr>");
-  }
-}
-else {
-  echo "0 results";
-}
-
-array_push($bag, "</table>");
-#====================================================
-$conn->close();
-*/
 ?>
 
 
 <html>
   <head>
     <title>Bearberry</title>
-
-    <!-- <link rel="stylesheet" media="print" href="print.css"> -->
-        
-        
-        <script type="text/javascript" src="less.min.js"></script>
-        <!-- <link rel="stylesheet" href="main.css"> -->
-        <link href="main.less" rel="stylessheet/less" type="text/css" />
-        <link href="main.css" rel="stylesheet" type="text/css" />
-        
-
+    <script type="text/javascript" src="less.min.js"></script>
+    <link href="main.less" rel="stylessheet/less" type="text/css" />
+    <link href="main.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
 <!--    <a href="/">Index</a> :: 

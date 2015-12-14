@@ -1,3 +1,70 @@
+@media screen {
+  .cards_horizontal {
+    display: block;
+  }
+  .container10 {
+    font-family: "Arial", sans-serif;
+    margin: auto;
+    padding: 5px 50px;
+  }
+  .comment {
+    background-color: #e5e8e8;
+  }
+  .card {
+    display: inline;
+    margin: 2%;
+    padding: 1%;
+    width: 43%;
+  }
+  .card .note {
+    background-color: #d5d8dc;
+    font-family: "Arial Narrow", sans-serif;
+    margin: 0px;
+    width: 600px;
+  }
+  .card .right {
+    float: right;
+  }
+  .card .header * {
+    display: inline;
+  }
+  .header {
+    font-family: Arial Black, sans-serif;
+    font-size: 15px;
+    color: #2e4053;
+  }
+  .table {
+    border: solid 1px black;
+    border-collapse: collapse;
+    font-family: "Arial Narrow", sans-serif;
+  }
+  .table td {
+    border: solid 1px black;
+    padding: 5px;
+  }
+  .table .heading {
+    background-color: #eee;
+  }
+  .table .heading * {
+    border: solid 1px black;
+    color: red;
+  }
+  .table .row {
+    border: solid 1px black;
+  }
+  .table .row .aligned {
+    text-align: center;
+  }
+  .table .row .exe_name {
+    width: auto;
+  }
+  .table .row .muscle {
+    width: auto;
+  }
+  .table .row .small {
+    font-size: 80%;
+  }
+}
 @media print {
   .card {
     display: inline-block;
@@ -22,8 +89,8 @@
     background-color: #e5e8e8;
   }
   .container10 {
-    margin: auto;
-    padding: 5px 50px;
+    margin: 0;
+    padding: 0;
   }
   .cards_horizontal {
     display: block;
@@ -57,10 +124,6 @@
     color: black;
     font-size: 8pt;
   }
-  table .heading .weight {
-    font-weight: bold;
-    font-family: "Consolas";
-  }
   table .row {
     border-collapse: collapse;
   }
@@ -73,72 +136,12 @@
   table .row .muscle {
     font-size: 8pt;
   }
+  table .row .weight {
+    font-weight: bold;
+    font-family: "Consolas";
+  }
   .header {
     font-family: Arial Black, sans-serif;
     font-size: 8pt;
-  }
-}
-@media screen {
-  .cards_horizontal {
-    display: block;
-  }
-  .container10 {
-    margin: auto;
-    padding: 5px 50px;
-  }
-  .comment {
-    background-color: #e5e8e8;
-  }
-  .card {
-    display: inline;
-    margin: 2%;
-    padding: 1%;
-    width: 43%;
-  }
-  .card .note {
-    background-color: gray;
-    font-family: "Arial Narrow", sans-serif;
-    margin: 0px;
-    width: inherit;
-  }
-  .card .right {
-    float: right;
-  }
-  .card .header * {
-    display: inline;
-  }
-  .header {
-    font-family: Arial Black, sans-serif;
-    font-size: 8px;
-  }
-  .table {
-    border: solid 1px black;
-    border-collapse: collapse;
-    font-family: "Arial Narrow", sans-serif;
-  }
-  .table .heading {
-    background-color: #eee;
-  }
-  .table .heading * {
-    border: solid 1px black;
-    color: red;
-  }
-  .table .row {
-    border: solid 1px black;
-  }
-  .table .row .aligned {
-    text-align: center;
-  }
-  .table .row .exe_name {
-    width: auto;
-  }
-  .table .row .muscle {
-    width: auto;
-  }
-  .table .row .small {
-    font-size: 80%;
-  }
-  .table td {
-    border: solid 1px black;
   }
 }
