@@ -107,7 +107,7 @@ foreach($users as $uid=>$lid){
         //var_dump($result);
 
 
-        array_push($bag, '<div class="card_note">'. $card_note_above.'</div>');
+        array_push($bag, '<div class="note">'. $card_note_above.'</div>');
         array_push($bag, '<table class="table">');
         array_push($bag, '<tr class="heading">');
         //array_push($bag, "<tr ".GRAY."><td>muscles</td><td>Exe</td><td>Exe name</td><td>week</td><td>weight</td><td>".$week."</td><td>".$weeknext."</td></tr>");
@@ -163,7 +163,7 @@ foreach($users as $uid=>$lid){
 
         array_push($bag, "</table>");
         //array_push($bag, 'Comments? Put a reference number in column C and write on the flip side');
-        array_push($bag, '<div class="card_note">'. $card_note_below.'</div>');
+        array_push($bag, '<div class="note">'. $card_note_below.'</div>');
         array_push($bag, '</div>'); // close a card
 
 }
@@ -357,8 +357,13 @@ $conn->close();
     <title>Bearberry</title>
 
     <!-- <link rel="stylesheet" media="print" href="print.css"> -->
-        <link rel="stylesheet" href="main.css">
-
+        
+        
+        <script type="text/javascript" src="less.min.js"></script>
+        <!-- <link rel="stylesheet" href="main.css"> -->
+        <link href="main.less" rel="stylessheet/less" type="text/css" />
+        <link href="main.css" rel="stylesheet" type="text/css" />
+        
 
   </head>
   <body>
