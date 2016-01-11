@@ -1,0 +1,175 @@
+@myColor: #00000;
+@myFontSize: 23px;
+@myBorder: 4px solid red;
+
+@myColor: #1f7eff;
+@myFontSize: 30px;
+@myBorder: 1px solid #1f7eff;
+
+/*@media screen {
+    .cards_horizontal {
+        display: block;
+    }
+    .container10 {
+        font-family: "Arial", sans-serif;
+        margin: auto;
+        padding: 5px 50px;
+    }
+    .comment {
+        background-color: #e5e8e8;
+    }
+    .card {
+        display: inline;
+        margin: 2%;
+        padding: 1%;
+        width: 43%;
+        
+        .note {
+            background-color: #d5d8dc;
+            font-family: "Arial Narrow", sans-serif;
+            margin:0px;
+            width: 600px;
+        }
+
+        .right {
+            float: right;
+        }
+        .header *{
+            display: inline;
+        }
+    }
+    .header {
+        font-family: Arial Black, sans-serif;
+        font-size: 15px;
+        color:  #2e4053;
+    }
+    .table {
+
+        td {
+            border: solid 1px black;
+            padding: 5px;
+        }
+
+        border: solid 1px black;
+        border-collapse: collapse;
+        font-family: "Arial Narrow", sans-serif;
+
+        .heading {
+            background-color: #eee;
+        }
+        .heading * {
+            border: solid 1px black;
+            color: red;
+        }
+        .row {
+            border: solid 1px black;
+            .aligned {
+                text-align: center;
+            }
+            .exe_name {
+                width: auto;
+            }
+            .muscle {
+                width: auto;
+            }
+            .small {
+                font-size: 80%;
+            }
+        }
+    }
+}*/
+/* for the time of editing, change "print" to "screen" temporarily */
+@media screen {
+
+    .card {
+        display: inline-block;
+        font-size: 10pt;
+        margin: 3pt;
+        margin-bottom: 15pt;
+        padding: 1pt;
+        width: 45%;
+
+        .note {
+            font-family: "Arial Narrow", sans-serif;
+            font-size: 8pt;
+            margin:0px;
+        }
+
+        .header *{
+            display: inline;
+        }
+
+        .right {
+            float: right;
+        }
+    }
+    .comment {
+        background-color: #e5e8e8;
+    }
+
+    .container10 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .cards_horizontal {
+        display: block;
+    }
+
+    /******************************/
+    h1 {
+        color: @myColor;
+        font-size: @myFontSize;
+    }
+
+    #myList {
+        border: @myBorder;
+    }
+
+    #container {
+        h2 {
+            color: red;
+        }
+        footer {
+            background-color: yellow;
+        }
+    }
+    table {
+        border: solid 1pt gray;
+        border-collapse: collapse;
+        font-family: "Arial Narrow", sans-serif;
+        font-size: 10pt;
+        td {
+            border: solid 1pt gray;
+        }
+
+
+        .heading {
+            background-color: lightgray;
+            border: solid 1pt gray;
+            color: black;
+            font-size: 8pt;
+        }
+
+        .row {
+            border-collapse: collapse;
+            .aligned {
+                text-align: center;
+            }
+            .exe_name {
+                font-size: 9pt;
+            }
+            .muscle {
+                font-size: 8pt;
+            }
+            .weight {
+                font-weight: bold;
+                font-family: "Consolas";
+            }
+        }
+    }
+    .header {
+        font-family: Arial Black, sans-serif;
+        font-size: 8pt;
+    }
+}
