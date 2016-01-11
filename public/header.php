@@ -8,7 +8,7 @@ define("SMALL", 'style="font-size:small;"');
 define("GRAY",  'style="background-color:lightgray;"');
 
 # ================================
-$week = 1550;
+$week = 1602;
 $weeknext = $week+1;
 
 $did = 1; # did = Day ID, the part of the Week List which is for one day
@@ -61,14 +61,8 @@ foreach($users as $uid=>$lid){
           $query = "SELECT first_name FROM bearberry.user WHERE id = %s";
           $sql = sprintf($query, $conn->real_escape_string($uid));
           #echo $sql;
-          $result = $conn->query($sql); // <---<<
-          # echo " " . $result . " ";
-          //var_dump($result);
-          //echo $result->num_rows;
-          //print_r($result->fetch_assoc());
-          // echo "var_dump: " . var_dump($result->fetch_assoc());
-          $row = $result->fetch_assoc();
-          #echo "User name: " . $row["first_name"] . "<--";
+          $result = $conn->query($sql); 
+
           if ($result->num_rows > 0) {
             #echo "Tada!";
             while($row = $result->fetch_assoc()){
@@ -82,25 +76,17 @@ foreach($users as $uid=>$lid){
               array_push($bag, '</div>');
             }
           }
-          // else {
-          //   echo "oops!";
-          //   var_dump($result->num_rows);
-          // }
-
 
         #--------------------------------------------------------------------
 
 
         $query    = file_get_contents("b.sql");
-        #echo "debug: query = " . $query;
         $sql = sprintf($query, 
           $conn->real_escape_string($uid), 
           $conn->real_escape_string($lid), 
           $conn->real_escape_string($did)
           );
-        # echo $sql;
         $result = $conn->query($sql);
-        //var_dump($result);
 
 
         array_push($bag, '<div class="note">'. $card_note_above.'</div>');
