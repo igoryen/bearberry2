@@ -15,14 +15,14 @@ FROM
 WHERE
     list_id = 8
 AND
-	day_type = 1;
+	day_type = 3;
     
 # 
-delete from `bearberry`.`list` where id = 408;
+#delete from `bearberry`.`list` where id = 408;
     
     
     
-SELECT * FROM `bearberry`.`list` WHERE eid = 91;
+SELECT * FROM `bearberry`.`list` WHERE eid = 110;
 
 INSERT INTO `list` VALUES 
 (58,1,1,1,80),

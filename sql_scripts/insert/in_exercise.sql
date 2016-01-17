@@ -11,7 +11,7 @@ VALUES
 
 SELECT * 
 FROM bearberry.exercise 
-where name like "%concentration curl%"
+where name like "%leg%"
 ORDER BY id DESC;
 
 select * from bearberry.exercise;

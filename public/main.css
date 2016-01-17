@@ -53,7 +53,7 @@
     border: solid 1px black;
   }
   .table .row .aligned {
-    text-align: center;
+    text-align: right;
   }
   .table .row .exe_name {
     width: auto;
@@ -65,6 +65,7 @@
     font-size: 80%;
   }
 }
+/* for the time of editing, change "print" to "screen" temporarily */
 @media print {
   .card {
     display: inline-block;
@@ -128,7 +129,7 @@
     border-collapse: collapse;
   }
   table .row .aligned {
-    text-align: center;
+    text-align: right;
   }
   table .row .exe_name {
     font-size: 9pt;
@@ -138,7 +139,7 @@
   }
   table .row .weight {
     font-weight: bold;
-    font-family: "Consolas";
+    font-family: "Consolas", monospace;
   }
   .header {
     font-family: Arial Black, sans-serif;

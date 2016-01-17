@@ -8,11 +8,11 @@ define("SMALL", 'style="font-size:small;"');
 define("GRAY",  'style="background-color:lightgray;"');
 
 # ================================
+# set manually
 $week = 1602;
+$did = 2; # did = Day ID, the part of the Week List which is for one day
+# ================================
 $weeknext = $week+1;
-
-$did = 1; # did = Day ID, the part of the Week List which is for one day
-
 $uid1 = 1; # uid = User ID: 1 (Igor)
 $uid2 = 2; # uid = User ID: 2 (Jenica)
 $uid3 = 3; # uid = User ID: 3 (Daniel)

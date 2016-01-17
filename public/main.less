@@ -6,7 +6,7 @@
 @myFontSize: 30px;
 @myBorder: 1px solid #1f7eff;
 
-/*@media screen {
+@media screen {
     .cards_horizontal {
         display: block;
     }
@@ -64,7 +64,7 @@
         .row {
             border: solid 1px black;
             .aligned {
-                text-align: center;
+                text-align: right;
             }
             .exe_name {
                 width: auto;
@@ -77,9 +77,9 @@
             }
         }
     }
-}*/
+}
 /* for the time of editing, change "print" to "screen" temporarily */
-@media screen {
+@media print {
 
     .card {
         display: inline-block;
@@ -154,7 +154,7 @@
         .row {
             border-collapse: collapse;
             .aligned {
-                text-align: center;
+                text-align: right;
             }
             .exe_name {
                 font-size: 9pt;
@@ -164,7 +164,7 @@
             }
             .weight {
                 font-weight: bold;
-                font-family: "Consolas";
+                font-family: "Consolas", monospace;
             }
         }
     }
